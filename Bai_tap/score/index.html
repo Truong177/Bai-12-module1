@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let score = [];
+    let numbers = +prompt('Nhập số lượng học sinh');
+    let sum = 0;
+    for (let i = 0; i < numbers; i++) {
+        let studentScore;
+        do {
+            studentScore = +prompt('Nhập điểm của học sinh ' + (i + 1));
+        } while (!Number.isInteger(studentScore) || studentScore < 0 || studentScore > 10);
+        score.push(studentScore);
+        sum += studentScore;
+    }
+    let average = sum / numbers;
+    document.write('Điểm trung bình của các học sinh là:', average);
+
+</script>
+</body>
+</html>
